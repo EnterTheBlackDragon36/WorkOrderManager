@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="WorkOrderManager.Forms.NewCompany"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WorkOrderManager.Forms"
+     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+        <Grid>
+ 
+             
+             
+                    <!--Form Example-->
+                    <Grid Background="White">
+            <TextBlock Margin="20,0,0,0" Text="New Company" Style="{StaticResource TitleTextBlockStyle}"/>
+            <RelativePanel>
+                            <StackPanel x:Name="Company" Margin="20">
+                                <TextBox x:Name="companyName" Header= "Company Name" Margin="0,24,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" />
+                                <TextBox x:Name="companyPhoneNumber" Header="Phone Number" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="TelephoneNumber" />
+                                <TextBox x:Name="companyFaxNumber" Header="Fax Number" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="TelephoneNumber" />
+                    <TextBox x:Name="companyWebsite" Header="WebSite" Margin="0,24,0,0" MaxLength="250" Width="400" HorizontalAlignment="Left" InputScope="Url"/>
+
+                    <RelativePanel>
+                        <StackPanel x:Name="AddressLocation">
+                            <TextBox x:Name="companyAddress" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="AlphanumericFullWidth" />
+                            <TextBox x:Name="companyAddress2" Margin="0,24,0,0" PlaceholderText="Address 2" MaxLength="50" Width="200" HorizontalAlignment="Left" InputScope="AlphanumericFullWidth" />
+                            <RelativePanel>
+                                <TextBox x:Name="City" PlaceholderText="City" Margin="0,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" InputScope="Text" />
+                                <AutoSuggestBox x:Name="companyState" PlaceholderText="State" TextChanged="AutoSuggestState_TextChanged" Width="175" Margin="24,24,0,0" RelativePanel.RightOf="City" />
+                            </RelativePanel>
+                            <TextBox x:Name="companyZipCode" PlaceholderText="Zip Code" Margin="0,24,0,0" MaxLength="6" Width="100" HorizontalAlignment="Left" InputScope="Number" />
+                        </StackPanel>
+                    </RelativePanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Save" Margin="0,24" Click="SaveButton_Click"/>
+                        <Button Content="Cancel" Margin="24" Click="CancelButton_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+                            
+                        </RelativePanel>
+                    </Grid>
+           
+  
+            
+                    <!--<CommandBar  Background="Transparent">
+                        <AppBarButton Icon="Add"/>
+                        <AppBarSeparator/>
+                        <AppBarButton Icon="Edit" />
+                        <AppBarButton Icon="Delete"/>
+                        <AppBarSeparator/>
+                        <AppBarButton Icon="Save"/>
+                    </CommandBar>-->
+            
+           
+        </Grid>
+ 
+</Page>

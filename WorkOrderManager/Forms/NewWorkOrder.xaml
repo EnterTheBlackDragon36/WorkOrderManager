@@ -1,0 +1,192 @@
+﻿<Page
+    x:Class="WorkOrderManager.Forms.NewWorkOrder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WorkOrderManager.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--Row 0 Column 1 Work Order Header [[Company Name] + Work Order]-->
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1" >
+            <TextBlock x:Name="woTitle" Text="[Company Name Work Order]" HorizontalAlignment="Center" FontSize="25" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock x:Name="woStatus" Text="Current Status" FontSize="20"/>
+                <TextBlock x:Name="woStatusFeedBack" Text="[Open : Closed]" FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
+        <!--Row 0 Column 2 Work Order Information  -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="2"  Padding="0,0,0,0" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="woNumber" Text="Work Order #:" FontSize="15" />
+                <TextBlock x:Name="txtwoNumber" Text="[Generated Number]" HorizontalAlignment="Left" FontSize="15"  Width="225" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="woDate" Text="Order Date:" FontSize="15" />
+                <TextBlock x:Name="txtwoDate" Text="[01/01/2018]" HorizontalAlignment="Left" FontSize="15"   Width="225" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="requestBy" Text="Requested By:" FontSize="15" />
+                <TextBlock x:Name="txtrequestBy" Text="[From Contacts]" FontSize="15"  HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="department" Text="Department:" FontSize="15" />
+                <TextBlock x:Name="txtdepartment" Text="[From Contacts]" HorizontalAlignment="Left" FontSize="15" Width="200" />
+            </StackPanel>
+          
+        </StackPanel>
+
+        <!-- Row 0 Column 0 Company Address [Work Order]-->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Padding="0,0,0,0" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="streetAddress" Text="Street Address:" FontSize="15" />
+                <TextBlock x:Name="txtstreetAddress" Text="[From Company]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="city" Text="City:" FontSize="15" />
+                <TextBlock x:Name="txtcity" Text="[From Company]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="state" Text="State:" FontSize="15" />
+                <TextBlock x:Name="txtstate" Text="[From Company]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="zipcode" Text="Zip Code:" FontSize="15" />
+                <TextBlock x:Name="txtzipcode" Text="[From Company]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+        </StackPanel>
+        <!--Row 0 Column 0 Company Contact Information -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Padding="0,0,0,0" Margin="0,125,0,0" >
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="companyPhone" Text="Phone:" FontSize="15" />
+                <TextBlock x:Name="txtcompanyPhone" Text="[(555) 444-4444]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="companyFax" Text="Fax:" FontSize="15" />
+                <TextBlock x:Name="txtcompanyFax" Text="[(555) 555-5555]" FontSize="15" HorizontalAlignment="Left"  Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock x:Name="companyWebAddress" Text="Website:" FontSize="15" />
+                <TextBlock x:Name="txtcompanyWebAddress" Text="[CompanyName@Company.com]" FontSize="15" HorizontalAlignment="Left"  Width="355" />
+            </StackPanel>
+
+        </StackPanel>
+        <!--Row 1 Column 0 Job Description Bill To, Ship To, Data Entry Information-->
+        <StackPanel Orientation="Vertical" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,15,0,0" Padding="0,0,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                  
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="350" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Padding="0,0,0,0">
+                    <TextBlock x:Name="jobLbl" Text="Job Description" HorizontalAlignment="Center" FontSize="15"/>
+                    <TextBox x:Name="txtJob" Width="700" BorderBrush="Black" TextWrapping="Wrap" AcceptsReturn="True" BorderThickness="1" Height="325" MaxHeight="325"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" BorderThickness="2" BorderBrush="Black" Grid.Column="1" >
+                    <TextBlock x:Name="billToLbl" Text="Bill To" HorizontalAlignment="Center" FontSize="15" />
+                    <TextBox x:Name="txtbillToName" Header="Name" HorizontalAlignment="Left"  PlaceholderText="Bill To Name" Width="300" />
+                    <TextBox x:Name="txtbillToCompName" Header="Company" HorizontalAlignment="Left" PlaceholderText="Bill To Company Name" Width="300" />
+                    <TextBox x:Name="txtbillToStreet" Header="Street" HorizontalAlignment="Left" PlaceholderText="Street Address" Width="300"/>
+                    <TextBox x:Name="txtbillToAddress" Header="Address" HorizontalAlignment="Left" PlaceholderText="City, State, Zip" Width="300"/>
+                    <TextBox x:Name="txtbillToPhone" Header="Phone Number" HorizontalAlignment="Left" PlaceholderText="(555) 555-5555" Width="300"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <CheckBox x:Name="chkboxUseCurrentCompany" IsChecked="False" />
+                        <TextBlock x:Name="useCurrentCompany" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-75,0,0,0" Text="Use Current Company" FontSize="15"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="2" BorderThickness="2" BorderBrush="Black" Margin="0" Padding="0">
+                    <TextBlock x:Name="shipToLbl" Text="Ship To" HorizontalAlignment="Center" FontSize="15" />
+                    <TextBox x:Name="txtshipToName" Header="Name" HorizontalAlignment="Left"  PlaceholderText="Ship To Name" Width="300" />
+                    <TextBox x:Name="txtshipToCompName" Header="Company" HorizontalAlignment="Left" PlaceholderText="Ship To Company Name" Width="300" />
+                    <TextBox x:Name="txtshipToStreet" Header="Street" HorizontalAlignment="Left" PlaceholderText="Street Address" Width="300"/>
+                    <TextBox x:Name="txtshipToAddress" Header="Address" HorizontalAlignment="Left" PlaceholderText="City, State, Zip" Width="300"/>
+                    <TextBox x:Name="txtshipToPhone" Header="Phone Number" HorizontalAlignment="Left" PlaceholderText="(555) 555-5555" Width="300"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <CheckBox x:Name="chkUseCurrentCompany" IsChecked="False" />
+                        <TextBlock x:Name="useCompany" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-75,0,0,0" Text="Use Current Company" FontSize="15"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </Grid>
+
+
+        </StackPanel>
+
+        <!--Row 2 Column 0 ColumnSpan 3 Grid Line Item Data Entry For Quantity, Description, Unit Price, Line Total **Needs Vertical ScrollBar for Additional Entry Overflow**-->
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,20,0,0" Padding="0,0,0,0">
+            <Grid x:Name="lineItemGridView">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                   
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center" >
+                    <TextBlock x:Name="quantity" HorizontalAlignment="Center" FontSize="15" Text="Qty" />
+                    <TextBox x:Name="qtyEntry" Width="100" />
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center">
+                    <TextBlock x:Name="Description" HorizontalAlignment="Center" FontSize="15" Text="Description" />
+                    <TextBox x:Name="descriptionEntry" Width="1500" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                    <TextBlock x:Name="unitPrice" HorizontalAlignment="Center" FontSize="15" Text="Unit Price" />
+                    <TextBox x:Name="unitPriceEntry" Width="150" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" HorizontalAlignment="Center">
+                    <TextBlock x:Name="lineTotal" HorizontalAlignment="Center" FontSize="15" Text="Line Total" />
+                    <TextBox x:Name="lineTotalEntry" Width="150" />
+                </StackPanel>
+                
+                
+                
+            </Grid>
+        </StackPanel>
+        
+        <!--Row 3 Column 0 ColumnSpan 2 Signature of Approver-->
+        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="signatureApprover" Text="Sign Below" />
+            <InkCanvas x:Name="inkSignatureCanvas" Height="75"  HorizontalAlignment="Left" Width="700" />
+            <Line x:Name="straightLine" StrokeThickness="2" Stroke="Black" X2="700" />
+        </StackPanel>
+        
+    </Grid>
+</Page>

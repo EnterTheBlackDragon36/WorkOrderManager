@@ -1,0 +1,129 @@
+﻿<Page
+    x:Class="WorkOrderManager.Views.ViewCompanies"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WorkOrderManager.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+         
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="0">
+            <TextBlock x:Name="title" Text="Comapnies List" FontSize="36" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" x:Name="ListofCompanies" >
+            <ListView x:Name="CompaniesList">
+                <ListBox x:Name="Companies">
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="companyLogo" Height="75" Width="75" Source="/CompanyImages/starbucks.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Name="CompanyName" Text="Starbucks" FontSize="15"/>
+                                <TextBlock x:Name="CompanyAddress" Text="A Seattle Coffee Company" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Height="75" Width="75" Source="/CompanyImages/wingstop.png"/>
+                            <StackPanel Orientation="Vertical"  Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="WING-STOP" FontSize="15"/>
+                                <TextBlock  Text="The wing experts" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/Wendys.png"/>
+                            <StackPanel Orientation="Vertical"  Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="Wendy's" FontSize="15"/>
+                                <TextBlock  Text="Old Fashioned Hamburgers" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/hooters.png"/>
+                            <StackPanel Orientation="Vertical"  Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="Hooters" FontSize="15"/>
+                                <TextBlock  Text="Hooters makes you happy" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/homedepot.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="The Home Depot" FontSize="15"/>
+                                <TextBlock  Text="Your Home Improvement Store" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/officedepot.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="Office Depot" FontSize="15"/>
+                                <TextBlock  Text="Office Supplies Made Easy" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/target.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="Target" FontSize="15" />
+                                <TextBlock  Text="Get More For Less" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/webhead.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="WebHead" FontSize="10"/>
+                                <TextBlock  Text="We do IT for you" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/walmart.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="WalMart" FontSize="15"/>
+                                <TextBlock  Text="Your neighborhood SuperStore" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image  Height="75" Width="75" Source="/CompanyImages/verizon.png"/>
+                            <StackPanel Orientation="Vertical" Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock  Text="Verizon" FontSize="15"/>
+                                <TextBlock  Text="Most Reliable Service" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </ListView>
+        </StackPanel>
+
+
+
+    </Grid>
+</Page>

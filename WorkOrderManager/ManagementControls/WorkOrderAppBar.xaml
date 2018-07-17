@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="WorkOrderManager.ManagementControls.WorkOrderAppBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WorkOrderManager.ManagementControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Opening="CommandBar_Opening" Closing="CommandBar_Closing" >
+            <AppBarButton Icon="AddFriend" Label="Add Contact" />
+            <AppBarButton Icon="Import" Label="Import Contact" />
+            <AppBarButton Icon="ImportAll" Label="Import All Contacts" />
+            <AppBarButton Icon="Cancel" Label="Cancel" />
+
+
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>
